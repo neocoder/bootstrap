@@ -74,7 +74,7 @@
       var $active = container.find('> .active')
         , transition = callback
             && $.support.transition
-            && $active.hasClass('fade')
+            && $active.hasClass('ffade')
 
       function next() {
         $active
@@ -88,7 +88,7 @@
           element[0].offsetWidth // reflow for transition
           element.addClass('in')
         } else {
-          element.removeClass('fade')
+          element.removeClass('ffade')
         }
 
         if ( element.parent('.dropdown-menu') ) {

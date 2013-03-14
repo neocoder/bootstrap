@@ -16,8 +16,8 @@ $(function () {
         ok($(document.body).alert()[0] == document.body, 'document.body returned')
       })
 
-      test("should fade element out on clicking .close", function () {
-        var alertHTML = '<div class="alert-message warning fade in">'
+      test("should ffade element out on clicking .close", function () {
+        var alertHTML = '<div class="alert-message warning ffade in">'
           + '<a class="close" href="#" data-dismiss="alert">×</a>'
           + '<p><strong>Holy guacamole!</strong> Best check yo self, you\'re not looking too good.</p>'
           + '</div>'
@@ -31,7 +31,7 @@ $(function () {
       test("should remove element when clicking .close", function () {
         $.support.transition = false
 
-        var alertHTML = '<div class="alert-message warning fade in">'
+        var alertHTML = '<div class="alert-message warning ffade in">'
           + '<a class="close" href="#" data-dismiss="alert">×</a>'
           + '<p><strong>Holy guacamole!</strong> Best check yo self, you\'re not looking too good.</p>'
           + '</div>'

@@ -39,7 +39,7 @@ $(function () {
           .tooltip({placement: 'bottom'})
           .tooltip('show')
 
-        ok($(".tooltip").is('.fade.bottom.in'), 'has correct classes applied')
+        ok($(".tooltip").is('.ffade.bottom.in'), 'has correct classes applied')
         tooltip.tooltip('hide')
       })
 
@@ -153,10 +153,10 @@ $(function () {
         tooltip.trigger('mouseenter')
 
         setTimeout(function () {
-          ok(!$(".tooltip").is('.fade.in'), 'tooltip is not faded in')
+          ok(!$(".tooltip").is('.ffade.in'), 'tooltip is not faded in')
           tooltip.trigger('mouseout')
           setTimeout(function () {
-            ok(!$(".tooltip").is('.fade.in'), 'tooltip is not faded in')
+            ok(!$(".tooltip").is('.ffade.in'), 'tooltip is not faded in')
             start()
           }, 200)
         }, 100)
@@ -172,10 +172,10 @@ $(function () {
         tooltip.trigger('mouseenter')
 
         setTimeout(function () {
-          ok(!$(".tooltip").is('.fade.in'), 'tooltip is not faded in')
+          ok(!$(".tooltip").is('.ffade.in'), 'tooltip is not faded in')
           tooltip.trigger('mouseout')
           setTimeout(function () {
-            ok(!$(".tooltip").is('.fade.in'), 'tooltip is not faded in')
+            ok(!$(".tooltip").is('.ffade.in'), 'tooltip is not faded in')
             start()
           }, 200)
         }, 100)
@@ -188,10 +188,10 @@ $(function () {
         stop()
         tooltip.trigger('mouseenter')
         setTimeout(function () {
-          ok(!$(".tooltip").is('.fade.in'), 'tooltip is not faded in')
+          ok(!$(".tooltip").is('.ffade.in'), 'tooltip is not faded in')
           tooltip.trigger('mouseout')
           setTimeout(function () {
-            ok(!$(".tooltip").is('.fade.in'), 'tooltip is not faded in')
+            ok(!$(".tooltip").is('.ffade.in'), 'tooltip is not faded in')
             start()
           }, 100)
         }, 50)
@@ -204,10 +204,10 @@ $(function () {
         stop()
         tooltip.trigger('mouseenter')
         setTimeout(function () {
-          ok(!$(".tooltip").is('.fade.in'), 'tooltip is not faded in')
+          ok(!$(".tooltip").is('.ffade.in'), 'tooltip is not faded in')
         }, 100)
         setTimeout(function () {
-          ok($(".tooltip").is('.fade.in'), 'tooltip has faded in')
+          ok($(".tooltip").is('.ffade.in'), 'tooltip has faded in')
           start()
         }, 200)
       })
@@ -231,7 +231,7 @@ $(function () {
                          .tooltip({ selector: 'a[rel=tooltip]',
                                     trigger: 'click' })
         div.find('a').trigger('click')
-        ok($(".tooltip").is('.fade.in'), 'tooltip is faded in')
+        ok($(".tooltip").is('.ffade.in'), 'tooltip is faded in')
       })
 
       test("should show tooltip when toggle is called", function () {
@@ -239,7 +239,7 @@ $(function () {
           .appendTo('#qunit-fixture')
           .tooltip({trigger: 'manual'})
           .tooltip('toggle')
-        ok($(".tooltip").is('.fade.in'), 'tooltip should be toggled in')
+        ok($(".tooltip").is('.ffade.in'), 'tooltip should be toggled in')
       })
 
       test("should place tooltips inside the body", function () {

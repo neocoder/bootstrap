@@ -119,7 +119,7 @@
         this.setContent()
 
         if (this.options.animation) {
-          $tip.addClass('fade')
+          $tip.addClass('ffade')
         }
 
         placement = typeof this.options.placement == 'function' ?
@@ -209,7 +209,7 @@
         , title = this.getTitle()
 
       $tip.find('.tooltip-inner')[this.options.html ? 'html' : 'text'](title)
-      $tip.removeClass('fade in top bottom left right')
+      $tip.removeClass('ffade in top bottom left right')
     }
 
   , hide: function () {
@@ -233,7 +233,7 @@
         })
       }
 
-      $.support.transition && this.$tip.hasClass('fade') ?
+      $.support.transition && this.$tip.hasClass('ffade') ?
         removeWithAnimation() :
         $tip.detach()
 

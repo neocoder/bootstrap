@@ -59,7 +59,7 @@
         .remove()
     }
 
-    $.support.transition && $parent.hasClass('fade') ?
+    $.support.transition && $parent.hasClass('ffade') ?
       $parent.on($.support.transition.end, removeElement) :
       removeElement()
   }

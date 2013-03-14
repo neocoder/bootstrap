@@ -118,7 +118,7 @@
         .remove()
     }
 
-    $.support.transition && $parent.hasClass('fade') ?
+    $.support.transition && $parent.hasClass('ffade') ?
       $parent.on($.support.transition.end, removeElement) :
       removeElement()
   }
@@ -852,7 +852,7 @@
         this.escape()
 
         this.backdrop(function () {
-          var transition = $.support.transition && that.$element.hasClass('fade')
+          var transition = $.support.transition && that.$element.hasClass('ffade')
 
           if (!that.$element.parent().length) {
             that.$element.appendTo(document.body) //don't move modals dom position
@@ -898,7 +898,7 @@
           .removeClass('in')
           .attr('aria-hidden', true)
 
-        $.support.transition && this.$element.hasClass('fade') ?
+        $.support.transition && this.$element.hasClass('ffade') ?
           this.hideWithTransition() :
           this.hideModal()
       }
@@ -952,7 +952,7 @@
 
     , backdrop: function (callback) {
         var that = this
-          , animate = this.$element.hasClass('fade') ? 'fade' : ''
+          , animate = this.$element.hasClass('ffade') ? 'ffade' : ''
 
         if (this.isShown && this.options.backdrop) {
           var doAnimate = $.support.transition && animate
@@ -979,7 +979,7 @@
         } else if (!this.isShown && this.$backdrop) {
           this.$backdrop.removeClass('in')
 
-          $.support.transition && this.$element.hasClass('fade')?
+          $.support.transition && this.$element.hasClass('ffade')?
             this.$backdrop.one($.support.transition.end, callback) :
             callback()
 
@@ -1164,7 +1164,7 @@
         this.setContent()
 
         if (this.options.animation) {
-          $tip.addClass('fade')
+          $tip.addClass('ffade')
         }
 
         placement = typeof this.options.placement == 'function' ?
@@ -1254,7 +1254,7 @@
         , title = this.getTitle()
 
       $tip.find('.tooltip-inner')[this.options.html ? 'html' : 'text'](title)
-      $tip.removeClass('fade in top bottom left right')
+      $tip.removeClass('ffade in top bottom left right')
     }
 
   , hide: function () {
@@ -1278,7 +1278,7 @@
         })
       }
 
-      $.support.transition && this.$tip.hasClass('fade') ?
+      $.support.transition && this.$tip.hasClass('ffade') ?
         removeWithAnimation() :
         $tip.detach()
 
@@ -1444,7 +1444,7 @@
       $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title)
       $tip.find('.popover-content')[this.options.html ? 'html' : 'text'](content)
 
-      $tip.removeClass('fade top bottom left right in')
+      $tip.removeClass('ffade top bottom left right in')
     }
 
   , hasContent: function () {
@@ -1747,7 +1747,7 @@
       var $active = container.find('> .active')
         , transition = callback
             && $.support.transition
-            && $active.hasClass('fade')
+            && $active.hasClass('ffade')
 
       function next() {
         $active
@@ -1761,7 +1761,7 @@
           element[0].offsetWidth // reflow for transition
           element.addClass('in')
         } else {
-          element.removeClass('fade')
+          element.removeClass('ffade')
         }
 
         if ( element.parent('.dropdown-menu') ) {

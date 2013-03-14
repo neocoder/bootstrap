@@ -54,7 +54,7 @@
         this.escape()
 
         this.backdrop(function () {
-          var transition = $.support.transition && that.$element.hasClass('fade')
+          var transition = $.support.transition && that.$element.hasClass('ffade')
 
           if (!that.$element.parent().length) {
             that.$element.appendTo(document.body) //don't move modals dom position
@@ -100,7 +100,7 @@
           .removeClass('in')
           .attr('aria-hidden', true)
 
-        $.support.transition && this.$element.hasClass('fade') ?
+        $.support.transition && this.$element.hasClass('ffade') ?
           this.hideWithTransition() :
           this.hideModal()
       }
@@ -154,7 +154,7 @@
 
     , backdrop: function (callback) {
         var that = this
-          , animate = this.$element.hasClass('fade') ? 'fade' : ''
+          , animate = this.$element.hasClass('ffade') ? 'ffade' : ''
 
         if (this.isShown && this.options.backdrop) {
           var doAnimate = $.support.transition && animate
@@ -181,7 +181,7 @@
         } else if (!this.isShown && this.$backdrop) {
           this.$backdrop.removeClass('in')
 
-          $.support.transition && this.$element.hasClass('fade')?
+          $.support.transition && this.$element.hasClass('ffade')?
             this.$backdrop.one($.support.transition.end, callback) :
             callback()
 
