@@ -1,0 +1,12 @@
+#!/bin/sh
+
+cp -R ./bootstrap/css/* ~/Sites/blog.dev/wp-content/plugins/wpnewsman/css/
+cp -R ./bootstrap/img/* ~/Sites/blog.dev/wp-content/plugins/wpnewsman/img/
+cp -R ./bootstrap/js/* ~/Sites/blog.dev/wp-content/plugins/wpnewsman/js/
+
+cp -R ./bootstrap/css/* ~/Sites/blog.dev/wp-content/plugins/wpNewsmanManager/css/
+cp -R ./bootstrap/img/* ~/Sites/blog.dev/wp-content/plugins/wpNewsmanManager/img/
+cp -R ./bootstrap/js/* ~/Sites/blog.dev/wp-content/plugins/wpNewsmanManager/js/
+
+
+echo "Done."
